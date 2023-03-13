@@ -1,0 +1,36 @@
+{% extends "studentnavbar.html" %}
+
+{% block content %}
+
+
+<!-- here we will add the form where librarina will see the request -->
+<table class="table table-bordered table-light">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">STUDENT ID</th>
+        <th scope="col">BOOK ID</th>
+        <th scope="col">Expiry Date</th>
+        <th scope="col">Retrun Status</th>
+        <th scope="col">APPROVE</th>
+      </tr>
+    </thead>
+    {% for data in data%}
+    <tbody>
+      <tr>
+        <input id="bookformid" type="text" class="form-control" name="tbl3id" value={{data[0]}}>
+        <th scope="row">{{data[0]}}</th>
+        <td>{{data[1]}}</td>
+        <td>{{data[2]}}</td>
+        <td>{{data[1]}}</td>
+        <td>{{data[2]}}</td>
+        
+      </tr>
+      
+    </tbody>
+    {% endfor %}
+  </table>
+
+
+
+{% endblock %}

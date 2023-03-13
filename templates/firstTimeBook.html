@@ -1,0 +1,36 @@
+{% extends "navbar.html" %}
+
+{%block content%}
+
+{% for books in books%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-7">
+            <div class="card mycard" style="width: 18rem;">
+                <img class="card-img-top" src={{books[6]}} alt="bookImg">
+                <div class="card-body">
+                    <h2 name="bname" class="card-title">Name  : {{books[1]}}</h2>
+                    <h5 class="card-title">Author  : {{books[2]}}</h5>
+                    
+                    <h5 class="card-title">ISBN  : {{books[3]}}</h5>
+                    
+                    <h5 class="card-text">Description  : {{books[4]}}</h5>
+                    <h5 class="card-text">Quantity Avaliable  : {{books[5]}}</h5>
+                        
+                    <input id="bookformid" type="text" class="form-control" name="bname" value={{books[0]}}>
+                    <button type="submit" class="btn btn-primary">Register Book
+                    </button>
+                   
+                                    
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
+<br>
+{% endfor %}
+
+{% endblock %}

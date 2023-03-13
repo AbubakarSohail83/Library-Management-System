@@ -1,0 +1,44 @@
+{% extends "studentnavbar.html" %}
+
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="/bksubject" method="post">
+                <input type="text" placeholder="Search Book" name="subject">
+                <button class="btn-success" type="submit">search</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{% for books in books%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-7">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Name  : {{books[1]}}</h5>
+                    <br>
+                    <h5 class="card-title">Author  : {{books[2]}}</h5>
+                    <br>
+                    <h5 class="card-title">ISBN  : {{books[3]}}</h5>
+                    <br>
+                    <h5 class="card-text">Description  : {{books[4]}}</h5>
+                    <h5 class="card-text">Quantity Avaliable  : {{books[5]}}</h5>
+                    <a href="#" class="btn btn-primary">Register Book</a>
+                    <br>                
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
+<br>
+{% endfor %}
+{% endblock %}

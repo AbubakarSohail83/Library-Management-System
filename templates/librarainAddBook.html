@@ -1,0 +1,123 @@
+{% extends "librarianNavbar.html" %}
+{% block content %}
+<div class="backendImg">
+<form action="/addbooks"  method="post">
+    <div class="container" id="Container">
+        <div class="row">
+           
+            <div class="col-md-7">
+                <h1 class="left-text">Add Books</h1>
+                <p class="left-text">LIBRARIES STORES ENERGY THAT FUEL THE IMAGINATION.THEY OPEN UP THE WINDOW AND INSPIRE US TO EXPLORE AND ARCHIEVE, AND CONTRIBUTE TO IMPROVING OUR QUALITY OF LIFE</p>
+            </div>
+        
+        
+            <div class="col-md-5">
+                <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="left-text">Add Books From</h3>
+                        <span> <i class="fa-solid fa-pen-to-square"></i></span>
+                    </div>
+                
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">Book Name</label>
+
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" name="bname" placeholder="BOOK NAME" required="true">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">Author Name</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" name="aname" placeholder="author name" required="true">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">ISBN</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" name="isbn" placeholder="ISBN-NO" required="true">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">Description</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-outline mb-4">
+                            <textarea class="form-control" name="description" id="textAreaExample6" rows="3"></textarea>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">Quantity</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-outline mb-4">
+                            
+                            <input type="text" class="form-control" name="quantity" placeholder="Quanity" required="true">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">Picture Link</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-outline mb-4">
+                            
+                            <input type="text" class="form-control" name="piclink" placeholder="Picture Link">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <br>
+                <div class="row">
+                    <div class="col-md-6 button">
+                        <button type="submit" class="btn btn-primary">Add Book</button>
+                        
+                    </div>
+            
+        
+                </div>
+            </form>
+            </div>
+        
+        </div>
+    </div>
+</form>
+</div>
+{% endblock %}

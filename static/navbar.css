@@ -1,0 +1,135 @@
+.nav-link:hover
+{
+    color:rgb(255, 98, 1);
+}
+.footerLink
+{
+    color:aliceblue;
+    font-size: larger;
+    font-weight: 500;
+
+}
+.footerLink:hover
+{
+    color:rgb(0, 136, 255);
+    font-size: x-large;
+    font-weight: 800;
+
+}
+nav
+{
+    background-color: black;
+}
+a
+{
+    color:rgb(255, 187, 0);
+}
+.img-fluid
+{
+    height: 200px;
+}
+#footer1 
+{
+    width: auto; 
+    /* height: 200px; */
+    background-color: rgb(14, 95, 247);
+}
+.list-group-item
+{
+    background-color: rgb(14, 95, 247);
+    border:none;
+}
+#footer2
+{
+    width: auto;
+    background-color: rgb(3, 30, 94);
+    color:white;
+}
+body{
+    width:auto;
+    margin:0;
+    padding:0;   
+}
+.navbar-toggler
+{
+    border-color: rgb(251, 13, 0);
+    border-width :2px;
+    
+}
+.navbar-toggler-icon
+{
+    background-color: gold;
+    
+    margin:0 0 4px;
+    width: 24px;
+    height: 5px;
+}
+*{
+    margin:0;
+    padding:0;
+}
+body
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.backendImg{
+    background-image: url("/static/3023.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  
+
+}
+h1{
+    font-size: 60px;
+    color: white;
+    margin-top: 250px;
+
+}
+p{
+    font-size: 20px;
+    color: white;
+    
+}
+.button
+{
+    font-size: 40px;
+    color: white;
+
+}
+.button1
+{
+    float:right;
+}
+h3
+{
+    color:white;
+    font-size: 20px;
+    margin-top: 40px;
+
+}
+#bookformid
+{
+    display: none;
+}
+.pen{
+    color:white;
+    margin-top: 40px;
+    float:right;
+    
+}
+label
+{
+    color:black;
+    font-weight: 700;
+    margin-top: 10px;
+}
+input{
+    margin-top: 10px;
+    box-shadow: -1px,1px,60px,10px black;
+    background:white;
+    
+}
+.searchpic
+{
+    color:aquamarine;
+}

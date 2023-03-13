@@ -1,0 +1,64 @@
+{% extends 'librarianNavbar.html' %}
+
+{%block content%}
+<div>
+<div style="color: black; background-color: goldenrod;">
+    <h2 style="color: blanchedalmond;"> LIBRARIAN'S DASHBOARD </h2>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-7">
+                    <div class="card" style="width: 18rem;">
+                        
+                        <div class="card-body">
+                            <h2 class="card-title">Update Your Data</h2>
+                            <br>
+                            <a href="{{url_for('librarianhome')}}" class="btn btn-primary">Update Data</a>
+                            <br>                
+                        </div>
+                    </div>
+                </div>  
+        </div>
+        <br>
+        <div class="col-md-4">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-7">
+                    <div class="card" style="width: 18rem;">
+                        
+                        <div class="card-body">
+                            <h2 class="card-title">Add Books</h2>
+                            <br>
+                            <a href="{{url_for('libaddbook')}}" class="btn btn-primary">Add Books</a>
+                            <br>                
+                        </div>
+                    </div>
+                </div>  
+        </div>
+        <br>        
+
+
+        <div class="col-md-4">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-7">
+                    <div class="card" style="width: 18rem;">
+
+                        <div class="card-body">
+                            <h2 class="card-title">Approve Books</h2>
+                            <br>
+                            <a href="{{url_for('showRequest')}}" class="btn btn-primary">Approve Books</a>
+                            <br>                
+                        </div>
+                    </div>
+                </div>  
+        </div>
+    </div>
+    <br> 
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,45 @@
+{% extends 'adminNavbar.html' %}
+{%block content%}
+<div style="background-color: Gold;">
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-7">
+                <div class="card" style="width: 18rem;">
+                    
+                    <div class="card-body">
+                        <h2 class="card-title">Update Your Data</h2>
+                        <br>
+                        <a href="{{url_for('showadminupdateProfileInfo')}}" class="btn btn-primary">Update Data</a>
+                        <br>                
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-7">
+                <div class="card" style="width: 18rem;">
+                    
+                    <div class="card-body">
+                        <h2 class="card-title">Add Librarian</h2>
+                        <br>
+                        <a href="{{url_for('adminaddlib')}}" class="btn btn-primary">Add Librarian</a>
+                        <br>                
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <br>
+    <br>
+    <br><br><br>
+</div>
+
+
+{%endblock%}

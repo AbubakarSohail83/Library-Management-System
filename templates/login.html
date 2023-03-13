@@ -1,0 +1,64 @@
+{% extends "navbar.html" %}
+{% block content %}
+<div class="backendImg">
+<form action="/login"  method="post">    
+    <div class="container" id="Container" >
+        <div class="row">
+            <div class="col-md-7">
+                <h1 class="left-text">LIBRARY LOGIN FORM</h1>
+                <p class="left-text">LIBRARIES STORES ENERGY THAT FUEL THE IMAGINATION.THEY OPEN UP THE WINDOW AND INSPIRE US TO EXPLORE AND ARCHIEVE, AND CONTRIBUTE TO IMPROVING OUR QUALITY OF LIFE</p>
+            </div>
+        
+        
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3 class="left-text">LOGIN FORM</h3>
+                    </div>
+                    <div class="col-md-4">
+                       <span> <i class="fa-solid fa-pen-to-square"></i></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">Username</label>
+
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" name="name" placeholder="USER-NAME">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">password</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" name="pwd" placeholder="password">
+                    </div>
+                </div>
+
+                <br>
+                <div class="row">
+                    <div class="col-md-6 button">
+                        <button type="submit" class="btn btn-primary hidebtn">login</button>
+                    </div>
+                    <div class="col-md-6 button button1">
+                        <a href="{{url_for('showSignUp')}}"><button class="btn btn-success hidebtn">Register</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+
+
+
+
+{% endblock %}

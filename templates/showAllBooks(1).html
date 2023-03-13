@@ -1,0 +1,121 @@
+{% extends 'librarianNavbar.html' %}
+
+{%block content%}
+
+<table id="booksTable" >
+    <thead>
+        <tr>
+            <th>
+                id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                ISBN
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Image Link
+            </th>
+        </tr>
+        
+    </thead>
+</table>
+
+<form id="bookForm" style="align-self: center;">
+</form>
+
+<button id="updateRecord" type="submit" style="background-color: gold; color: #0E5FF7; width:fit-content; align-self: center;">Update Record</button>
+
+<script>
+    $(document).ready(function(){
+        var myData;
+        $.ajax({
+            type:"GET",
+            url:"/api/showAllBooks",
+            success:function(result)
+            {
+                myData=result;
+                console.log(myData)
+
+
+                  if (myData != null || myData != "") {
+                    table = $('#booksTable').DataTable({
+                        data: myData, destroy: true,
+                        columns: [
+                            {data:"id"},
+                            { data: 'bname' },
+                            { data: 'author' },
+                            { data: 'isbn' },
+                            { data: 'description' },
+                            {data:'quantity'},
+                            {data:'pdflink'}
+                        ]
+                    });}
+                   
+
+                $('#booksTable tbody').on('click', 'tr', function () {
+                    if ($(this).hasClass('selected')) {
+                        $(this).removeClass('selected');
+                    } else {
+                        table.$('tr.selected').removeClass('selected');
+                        $(this).addClass('selected');
+                    }
+                   
+                });
+            }
+        });   
+        $("#updateRecord").on('click', function () {
+            var table = $("#booksTable").DataTable();
+            let selectedRow = table.row(".selected");
+            if (!selectedRow.data()) {
+                //if no row is selected
+                alert("Please select a book!!");
+                return;
+            }
+            var rowData=selectedRow.data();
+            var rowId=rowData["id"];
+            rowId=JSON.stringify(rowId);
+
+            $("#bookForm").html("<input required='true'>Book Name</input><br><input  required='true'>Book Author</input><br><input  required='true'>Book ISBN</input><br><input  required='true'>Description</input><br><input  required='true'>Quantity</input><br><input  required='true'>Image Link</input><br><button id='save' type='submit'>Save Changes</button>")
+               
+        });
+        
+
+        $("#save").on("click", function () {
+            var formdata = $("#bookForm").serializeArray();
+            var data2 = {};
+            $(formdata).each(function (index, obj) {
+                data2[obj.name] = obj.value;
+            });
+            console.log(data2)
+            data2 = JSON.stringify(data2)
+            $.ajax({
+
+                method: "POST",
+                url: "/api/updateBook"+rowId,
+                data:data2,
+                dataType:JSON,
+                success() {
+                    console.log("It worked")
+                }
+            }
+            );
+        })
+    });
+
+
+    </script>
+
+
+
+{% endblock %}

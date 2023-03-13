@@ -1,0 +1,37 @@
+{% extends "studentnavbar.html" %}
+
+{%block content%}
+
+
+<div style="margin: 3%;">
+    <div style="display: flexbox;">
+        <div>
+        </div>
+        {% for books in books%}
+
+        <div class="card mycard" style="width: 18rem;display: inline-block; margin: 10px;">
+            <img class="card-img-top" style="height: 300px; width:100%" src={{books[6]}} alt="bookImg">
+            <div class="card-body">
+                <h2 name="bname" class="card-title">Name : {{books[1]}}</h2>
+                <h5 class="card-title">Author : {{books[2]}}</h5>
+
+                <h5 class="card-title">ISBN : {{books[3]}}</h5>
+
+                <h5 class="card-text">Description : {{books[4]}}</h5>
+                <h5 class="card-text">Quantity Avaliable : {{books[5]}}</h5>
+                <form action="/studentregister" method="post">
+                    <input id="bookformid" type="text" class="form-control" name="bname" value={{books[0]}}>
+
+                    <button type="submit" class="btn btn-primary">Register Book
+                    </button>
+                </form>
+
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+<br>
+
+{% endblock %}

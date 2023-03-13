@@ -1,0 +1,115 @@
+{% extends "navbar.html" %}
+{% block content %}
+<div class="backendImg">
+<form action="/signup"  method="post">
+    <div class="container" id="Container">
+        <div class="row">
+           
+            <div class="col-md-7">
+                <h1 class="left-text">LIBRARY SIGNUP FORM</h1>
+                <p class="left-text">LIBRARIES STORES ENERGY THAT FUEL THE IMAGINATION.THEY OPEN UP THE WINDOW AND INSPIRE US TO EXPLORE AND ARCHIEVE, AND CONTRIBUTE TO IMPROVING OUR QUALITY OF LIFE</p>
+            </div>
+        
+        
+            <div class="col-md-5">
+                <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="left-text">Registration From</h3>
+                        <span> <i class="fa-solid fa-pen-to-square pen"></i></span>
+                    </div>
+                
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">Email</label>
+
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="email" class="form-control" name="email" placeholder="E-MAIL">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">Name</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" name="name" placeholder="NAME">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">ROLL-NO</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" name="rollno" placeholder="ROLL-NO">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">USER-NAME/label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" name="username" placeholder="USER-NAME">
+                    </div>
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">PASSWORD</label>
+
+                    </div>
+                
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" name="password" placeholder="PASSWORD">
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="label control-label">Confirm-PASSWORD</label>
+
+                    </div>
+                </div>
+                    <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" name="confirmpassword" placeholder="CONFIRM PASSWORD">
+                    </div>
+                </div>
+
+                
+                <br>
+                <div class="row">
+                    <div class="col-md-6 button">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                        
+               
+        
+                </div>
+            </form>
+            </div>
+        
+        </div>
+    </div>
+</form>
+</div>
+{% endblock %}

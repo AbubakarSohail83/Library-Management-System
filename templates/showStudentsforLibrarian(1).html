@@ -1,0 +1,52 @@
+{% extends 'librarianNavbar.html' %}
+
+{%block content%}
+
+<table id="student" style="background-color: gold; margin:1%">
+    <thead>
+        <tr>
+            <th>   Name   </th>
+            <th>   Username   </th>
+            <th>   Email   </th>
+            <th>   Rollno   </th>
+        </tr>
+    </thead>
+</table>
+
+<script>
+    var myData
+    console.log("It worked1")
+    var result
+    $(document).ready(function () {
+        console.log("It worked2")
+        $.ajax({
+        
+            type: "GET",
+            url: "/api/showStudents",
+            success: function (result) {
+                console.log('fawad gujjar:', result)
+                // myData = JSON.parse(myData)
+                myData=result
+
+                if (myData != null || myData != "") {
+                    table = $('#student').DataTable({
+                        data: myData, destroy: true,
+                        columns: [
+                            { data: 'name' },
+                            { data: 'username' },
+                            { data: 'email' },
+                            { data: 'rollno' }
+                            ]
+                    });
+                }
+
+            }
+        });
+    });
+
+
+</script>
+
+
+
+{% endblock %}
